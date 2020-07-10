@@ -1,5 +1,4 @@
-
-//let gameboard = 
+//let gameboard =
 
 /*function checkWinCondition() {
 	// checks for win conditions
@@ -37,36 +36,31 @@ function writeMessage(message) {
 //When a user clicks on a square, mark the square with the current user's token (alternating with each click). You can add an X or an O or some other marker that corresponds to the current player.
 let currentPlayer = 'X';
 
-
 function switchPlayer() {
-currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-
+	currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
 }
 
-let playersTurn = document.querySelector('.player plays')
-if(currentPlayer === 'X'){
-    return 
-}
+//let playersTurn = document.querySelector('.player plays')
+//if(currentPlayer === 'X'){
+//  return
+//}
 
-let playBox = document.querySelectorAll(".box");
+let playBox = document.querySelectorAll('.box');
 //console.log(square);
 
-
-playBox.forEach((playBox)=>{
-    playBox.addEventListener( 'click',playerClickEvent)
-})
-
+playBox.forEach((playBox) => {
+	playBox.addEventListener('click', playerClickEvent);
+});
 
 function playerClickEvent(event) {
-    //console.log(event.target.id);
-    event.target.innerHTML = currentPlayer;
-switchPlayer()
-    
+	//console.log(event.target.id);
+	event.target.innerHTML = currentPlayer;
+	switchPlayer();
 }
-const reSetIt = document.querySelector('button')
+const reSetIt = document.querySelector('button');
 
-reSetIt.addEventListener('click',resetClickEvent)
+reSetIt.addEventListener('click', resetClickEvent);
 
-function resetClickEvent(event){
-document.querySelectorAll('.box').forEach((box) => (box.innerHTML = ''));
+function resetClickEvent(event) {
+	document.querySelectorAll('.box').forEach((box) => (box.innerHTML = ''));
 }
